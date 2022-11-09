@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">MetroApp</string>
+    <string name="username">NOMBRE</string>
+    <string name="password">CONTRASEÑA</string>
+    <string name="email">EMAIL</string>
+    <string name="confirmar">CONFIRMAR CONTRASEÑA</string>
+    <string name="BtnEntrar">ENTRAR</string>
+    <string name="BtnCrear">CREAR CUENTA</string>
+    <string name="newPassword">Cambiar contraseña</string>
+    <string name="logOut">Cerrar Sesión</string>
+    <string name="opciones">Opciones</string>
+    <string name="fondos">Añadir Fondos</string>
+
+
+    <!-- rutas alimentadoras -->
+    <string name="rutasAlimentadoras">Rutas Alimentadoras</string>
+    <string name="ruta1">AB1</string>
+    <string name="ruta2">AC4</string>
+    <string name="ruta3">AF1</string>
+    <string name="ruta4">AF2</string>
+    <string name="ruta5">AN1</string>
+    <string name="ruta6">AN2</string>
+    <string name="ruta7">AP2</string>
+    <string name="ruta8">AP5</string>
+    <string name="ruta9">AP7</string>
+    <string name="ruta10">APD1</string>
+    <string name="ruta11">APD4</string>
+
+    <!-- rutas pre troncales -->
+    <string name="rutasPreTroncales">Rutas Pre-Troncales</string>
+    <string name="rutaP3">P3</string>
+    <string name="rutaP5">P5</string>
+    <string name="rutaP6">P6</string>
+    <string name="rutaP7">P7</string>
+    <string name="rutaP13">P13</string>
+    <string name="rutaP15">P15</string>
+
+    <!-- rutas troncales -->
+    <string name="rutasTroncales">Rutas Troncales</string>
+    <string name="rutaT2">T2</string>
+    <string name="rutaT4">T4</string>
+
+    <!-- rutas complementarias -->
+    <string name="rutasComplementarias">Rutas Complementarias</string>
+    <string name="rutaAP1">AP1</string>
+    <string name="rutaAP3">AP3</string>
+    <string name="rutaAP4">AP4</string>
+    <string name="rutaAP12">AP12</string>
+
+
+</resources>

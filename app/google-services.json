@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "313678503201",
+    "project_id": "metroapp-9d497",
+    "storage_bucket": "metroapp-9d497.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:313678503201:android:e75c1d347b7bdc9cc8f260",
+        "android_client_info": {
+          "package_name": "com.example.metroapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "313678503201-0fa5iq3se5tmhops7cn8ofmiek2nigi2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsM1YqlKFn06WUGUuuirPCO-hk9AqETWI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "313678503201-0fa5iq3se5tmhops7cn8ofmiek2nigi2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

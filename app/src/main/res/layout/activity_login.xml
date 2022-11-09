@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    android:background="@drawable/background">
+
+
+    <ImageView
+        android:id="@+id/ImgLogo"
+        android:layout_width="253dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="245dp"
+        android:layout_marginEnd="70dp"
+        android:transitionName="logoImageTrans"
+        app:layout_constraintBottom_toTopOf="@+id/InputLoginEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/InputLoginEmail"
+        android:layout_width="341dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="112dp"
+        android:background="@drawable/usuario"
+        android:drawableLeft="@drawable/email"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textPersonName"
+        android:paddingLeft="25dp"
+        android:transitionName="inputEmailTrans"
+        app:layout_constraintBottom_toTopOf="@+id/InputLoginPasswd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.557"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ImgLogo" />
+
+    <EditText
+        android:id="@+id/InputLoginPasswd"
+        android:layout_width="341dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/usuario"
+        android:drawableLeft="@drawable/security"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingLeft="25dp"
+        android:transitionName="inputPasswdTrans"
+        app:layout_constraintBottom_toTopOf="@+id/TxtToRegister"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.557"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InputLoginEmail"
+        app:passwordToggleEnabled="true" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/BtnEntrar"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="93dp"
+        android:backgroundTint="#4D8110"
+        android:text="@string/BtnEntrar"
+        android:transitionName="btnTrans"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtToRegister" />
+
+    <TextView
+        android:id="@+id/TxtToRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:text="¿No tienes cuenta? registrate"
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        android:transitionName="textTrans"
+        app:layout_constraintBottom_toTopOf="@+id/BtnEntrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InputLoginPasswd" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

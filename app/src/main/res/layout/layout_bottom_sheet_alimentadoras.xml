@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomSheetContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_backgound"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="25dp"
+        android:paddingTop="20dp"
+        android:textAlignment="center"
+        android:text="@string/rutasAlimentadoras"
+        android:textSize="20dp">
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/btnRuta1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/location"></ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="25dp"
+            android:text="@string/ruta1"
+            android:textSize="20dp"></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnRuta2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/location">
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="25dp"
+            android:text="@string/ruta2"
+            android:textSize="20dp">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnRuta3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/location">
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="25dp"
+            android:text="@string/ruta3"
+            android:textSize="20dp">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnRuta4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/location">
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="25dp"
+            android:text="@string/ruta4"
+            android:textSize="20dp">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnRuta5"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/location">
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="25dp"
+            android:text="@string/ruta5"
+            android:textSize="20dp">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnRuta6"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/location">
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="25dp"
+            android:text="@string/ruta6"
+            android:textSize="20dp">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnRuta7"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/location">
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="25dp"
+            android:text="@string/ruta7"
+            android:textSize="20dp">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnRuta8"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/location">
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="25dp"
+            android:text="@string/ruta8"
+            android:textSize="20dp">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnRuta9"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/location">
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="25dp"
+            android:text="@string/ruta9"
+            android:textSize="20dp">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnRuta10"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/location">
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="25dp"
+            android:text="@string/ruta10"
+            android:textSize="20dp">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnRuta11"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/location">
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="25dp"
+            android:text="@string/ruta11"
+            android:textSize="20dp">
+        </TextView>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomSheetContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_backgound"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:onClick="onClickLogout"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="100dp"
+            android:src="@drawable/logout">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="25dp"
+            android:text="Cerrar Sesión"
+            android:textSize="20dp">
+
+        </TextView>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuRutas"
+    android:background="@drawable/menurutas">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="208dp"
+        android:text="Rutas"
+        android:textColor="@color/verdeOscuro"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/linea" />
+
+    <Button
+        android:id="@+id/btnAlimentadoras"
+        android:layout_width="327dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
+        android:onClick="onClickAlimentadoras"
+        android:shadowDx="5"
+        android:text="Alimentadoras"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/verdeOscuro"
+        android:textSize="20sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnPreTroncales"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/btnComple"
+        android:layout_width="327dp"
+        android:layout_height="59dp"
+        android:backgroundTint="@color/white"
+        android:onClick="onClickComplementarias"
+        android:shadowDx="5"
+        android:text="Complementarias"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/verdeOscuro"
+        android:textSize="20sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnBackMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTroncales" />
+
+    <Button
+        android:id="@+id/btnTroncales"
+        android:layout_width="327dp"
+        android:layout_height="59dp"
+        android:backgroundTint="@color/white"
+        android:onClick="onClickTroncales"
+        android:shadowDx="5"
+        android:text="Troncales"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/verdeOscuro"
+        android:textSize="20sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnComple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPreTroncales" />
+
+    <Button
+        android:id="@+id/btnPreTroncales"
+        android:layout_width="327dp"
+        android:layout_height="59dp"
+        android:backgroundTint="@color/white"
+        android:onClick="onClickPreTroncales"
+        android:shadowDx="5"
+        android:text="Pre Troncales"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/verdeOscuro"
+        android:textSize="20sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnTroncales"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAlimentadoras" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBackMenu"
+        android:layout_width="70dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="42dp"
+        android:backgroundTint="@color/verdeOscuro"
+        android:drawableBottom="@drawable/back_arrow"
+        android:onClick="onClickBackMenu"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnComple"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
