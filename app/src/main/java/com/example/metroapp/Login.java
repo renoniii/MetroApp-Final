@@ -37,7 +37,6 @@ public class Login extends AppCompatActivity {
     ImageView ImgLogo;
 
     private FirebaseAuth firebaseAuth;
-    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,33 +101,16 @@ public class Login extends AppCompatActivity {
 
     public void iniciarSesion(String email, String password){
 
-        progressDialog.setCancelable(false);
-        progressDialog.show();
-
         firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-
-                    progressDialog.dismiss();
-                    FirebaseUser user = firebaseAuth.getCurrentUser();
-
                     Intent intent = new Intent(Login.this, Menu.class);
-                    assert user != null;
-                    Toast.makeText(Login.this, "Bienvenid@" +user.getEmail(), Toast.LENGTH_SHORT).show();
                     startActivity(intent);
                     finish();
-                }
-                else{
-                    progressDialog.dismiss();
+                }else{
                     Toast.makeText(Login.this, "Información incorrecta", Toast.LENGTH_SHORT).show();
                 }
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                progressDialog.dismiss();
-                Toast.makeText(Login.this, e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 
