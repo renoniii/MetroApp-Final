@@ -144,5 +144,10 @@ public class Tarjeta extends AppCompatActivity {
 
     }
 
+    //metodo para volver al menu"
+    public void onClickMenu(View view){
+        startActivity(new Intent(Tarjeta.this, Menu.class));
+    }
+
 
 }

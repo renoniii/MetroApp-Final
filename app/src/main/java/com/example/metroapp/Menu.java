@@ -1,8 +1,6 @@
 package com.example.metroapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,10 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -50,20 +47,10 @@ public class Menu extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         FirebaseAuth.getInstance().signOut();
+                        Toast.makeText(Menu.this, "Sesion cerrada", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(Menu.this, Login.class);
                         startActivity(intent);
                         finish();
-                        bottomSheetDialog.dismiss();
-                    }
-                });
-
-                //Cambiar contraseña
-                bottomSheetView.findViewById(R.id.btnSolicitarTarjeta).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-
-
-
                         bottomSheetDialog.dismiss();
                     }
                 });
