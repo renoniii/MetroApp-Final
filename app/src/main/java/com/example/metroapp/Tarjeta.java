@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -57,6 +58,8 @@ public class Tarjeta extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         user = firebaseAuth.getCurrentUser();
 
+
+
         BASE_DE_DATOS = FirebaseDatabase.getInstance().getReference("USUARIOSS_DE_APP");
 
         //obtenemos datos del usuario
@@ -73,11 +76,15 @@ public class Tarjeta extends AppCompatActivity {
                     String saldoInicial = ""+snapshot.child("saldoInicial").child("saldoInicial").getValue();
 
                     //colocar datos
-                    txtSaldoint.setText("Saldo: $ "+saldoInicial);
+                    txtSaldoint.setText(saldoInicial);
                     txtNroTarjeta.setText(idTarjeta);
                     txtNombre.setText("Hola, "+name);
+
+
                 }
+
             }
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
@@ -89,22 +96,31 @@ public class Tarjeta extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+               int acomulado=Integer.parseInt(txtSaldoint.getText().toString());
+
+
+
                 if (rbSaldo1.isChecked()){
 
-                    int resultado1 = valor1+2500;
-                    r+=resultado1;
+
+
+                    int resultado1 = acomulado+2500;
+                    r=resultado1;
 
                 }if (rbSaldo2.isChecked()){
-                    int resultado2 = valor1+5000;
-                    r+=resultado2;
+
+                    int resultado2 = acomulado+5000;
+                    r=resultado2;
 
                 }if (rbSaldo3.isChecked()){
-                    int resultado3 = valor1+10000;
-                    r+=resultado3;
+
+                    int resultado3 = acomulado+10000;
+                    r=resultado3;
 
                 }if (rbSaldo4.isChecked()){
-                    int resultado4 = valor1+20000;
-                    r+=resultado4;
+
+                    int resultado4 = acomulado+20000;
+                    r=resultado4;
                 }
                 txtSaldoint.setText(Integer.toString(r));
 
