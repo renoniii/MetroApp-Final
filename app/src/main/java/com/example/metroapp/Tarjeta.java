@@ -14,6 +14,8 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -55,8 +57,6 @@ public class Tarjeta extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         user = firebaseAuth.getCurrentUser();
 
-
-
         BASE_DE_DATOS = FirebaseDatabase.getInstance().getReference("USUARIOSS_DE_APP");
 
         //obtenemos datos del usuario
@@ -70,19 +70,16 @@ public class Tarjeta extends AppCompatActivity {
                     String uid = ""+snapshot.child("uid").getValue();
                     String name = ""+snapshot.child("name").getValue();
                     String idTarjeta = ""+snapshot.child("idtarjeta").getValue();
-                    String saldoInicial = ""+snapshot.child("saldoInicial").child("saldoInicial").getValue();
+                    String saldoInicial = ""+snapshot.child("saldoInicial").getValue();
 
                     //colocar datos
                     txtSaldoint.setText(saldoInicial);
                     txtNroTarjeta.setText(idTarjeta);
                     txtNombre.setText("Hola, "+name);
 
-
                 }
 
             }
-
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
@@ -127,11 +124,16 @@ public class Tarjeta extends AppCompatActivity {
 
                 DatosUsuario.put("saldoInicial", saldoInicial);
 
+                BASE_DE_DATOS.child(uid).updateChildren(DatosUsuario).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Toast.makeText(Tarjeta.this, "Los fondos se agregaron exitosamente", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
 
                 DatabaseReference reference = database.getReference("USUARIOSS_DE_APP");
-
-                reference.child(uid).child("saldoInicial").updateChildren(DatosUsuario);
 
             }
         });

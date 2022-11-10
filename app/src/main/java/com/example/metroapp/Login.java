@@ -105,6 +105,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+                    Toast.makeText(Login.this, "Bienvenid@", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Login.this, Menu.class);
                     startActivity(intent);
                     finish();
