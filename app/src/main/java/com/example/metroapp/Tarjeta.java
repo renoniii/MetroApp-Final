@@ -28,10 +28,7 @@ public class Tarjeta extends AppCompatActivity {
 
     Button btnFondos;
     TextView txtSaldoint, txtNroTarjeta, txtNombre;
-    CheckBox rbSaldo1;
-    CheckBox rbSaldo2;
-    CheckBox rbSaldo3;
-    CheckBox rbSaldo4;
+    RadioButton rbSaldo1, rbSaldo2, rbSaldo3, rbSaldo4;
     int valor1;
     int r;
 
@@ -98,11 +95,37 @@ public class Tarjeta extends AppCompatActivity {
 
                int acomulado=Integer.parseInt(txtSaldoint.getText().toString());
 
+               boolean checked = ((RadioButton) view).isChecked();
 
+               switch (view.getId()){
+                   case (R.id.rbSaldo1):
+                       if (checked){
+                           int resultado1 = acomulado+2500;
+                           r=resultado1;
+                       }
+                       break;
+                   case (R.id.rbSaldo2):
+                       if(checked){
+                           int resultado2 = acomulado+5000;
+                           r=resultado2;
+                       }
+                       break;
+                   case (R.id.rbSaldo3):
+                       if(checked){
+                           int resultado3 = acomulado+10000;
+                           r=resultado3;
+                       }
+                       break;
+                   case (R.id.rbSaldo4):
+                       if(checked){
+                           int resultado4 = acomulado+20000;
+                           r=resultado4;
+                       }
+                       break;
+               }
+                txtSaldoint.setText(Integer.toString(r));
 
-                if (rbSaldo1.isChecked()){
-
-
+                /*if (rbSaldo1.isChecked()){
 
                     int resultado1 = acomulado+2500;
                     r=resultado1;
@@ -122,7 +145,7 @@ public class Tarjeta extends AppCompatActivity {
                     int resultado4 = acomulado+20000;
                     r=resultado4;
                 }
-                txtSaldoint.setText(Integer.toString(r));
+                txtSaldoint.setText(Integer.toString(r));*/
 
                 FirebaseUser user = firebaseAuth.getCurrentUser();
 
