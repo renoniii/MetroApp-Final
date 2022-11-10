@@ -52,18 +52,19 @@
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-      <ImageView
-          android:id="@+id/imageView4"
-          android:layout_width="110dp"
-          android:layout_height="130dp"
-          android:layout_marginTop="16dp"
-          android:layout_marginBottom="16dp"
-          app:layout_constraintBottom_toTopOf="@+id/imageView5"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintHorizontal_bias="0.498"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/img_rutas"
-          app:srcCompat="@drawable/icono_tarjeta" />
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="110dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="onClickTarjeta"
+        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_rutas"
+        app:srcCompat="@drawable/icono_tarjeta" />
 
       <TextView
           android:id="@+id/textView6"
@@ -92,19 +93,17 @@
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toBottomOf="@+id/img_rutas" />
 
-       <ImageView
-          android:id="@+id/btnUser"
-          android:layout_width="63dp"
-          android:layout_height="64dp"
-          android:layout_marginStart="12dp"
-          android:layout_marginTop="44dp"
-          android:layout_marginEnd="316dp"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintHorizontal_bias="0.7"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent"
-          app:srcCompat="@drawable/icono_perfil" />
-
+    <ImageView
+        android:id="@+id/btnUser"
+        android:layout_width="63dp"
+        android:layout_height="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.047"
+        app:srcCompat="@drawable/icono_perfil" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

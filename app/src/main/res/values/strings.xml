@@ -1,16 +1,22 @@
 <resources>
     <string name="app_name">MetroApp</string>
-    <string name="username">NOMBRE</string>
+    <string name="username">NOMBRE COMPLETO</string>
     <string name="password">CONTRASEÑA</string>
     <string name="email">EMAIL</string>
+    <string name="telefono">TELEFONO</string>
     <string name="confirmar">CONFIRMAR CONTRASEÑA</string>
     <string name="BtnEntrar">ENTRAR</string>
     <string name="BtnCrear">CREAR CUENTA</string>
+
+    <!-- opciones -->
     <string name="newPassword">Cambiar contraseña</string>
     <string name="logOut">Cerrar Sesión</string>
-    <string name="opciones">Opciones</string>
-    <string name="fondos">Añadir Fondos</string>
 
+    <!-- tarjeta -->
+    <string name="fondos">Añadir Fondos</string>
+    <string name="nroTarjeta">ID Tarjeta</string>
+    <string name="nombreUser">Hola, </string>
+    <string name="saldo">Saldo: $ </string>
 
     <!-- rutas alimentadoras -->
     <string name="rutasAlimentadoras">Rutas Alimentadoras</string>

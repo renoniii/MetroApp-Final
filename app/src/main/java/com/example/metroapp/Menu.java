@@ -57,6 +57,17 @@ public class Menu extends AppCompatActivity {
                     }
                 });
 
+                //Cambiar contraseña
+                bottomSheetView.findViewById(R.id.btnSolicitarTarjeta).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+
+
+                        bottomSheetDialog.dismiss();
+                    }
+                });
+
                 bottomSheetDialog.setContentView(bottomSheetView);
                 bottomSheetDialog.show();
 
@@ -68,6 +79,11 @@ public class Menu extends AppCompatActivity {
     //metodo para ver rutas"
     public void onClickRutas(View view){
         startActivity(new Intent(Menu.this, MenuRutas.class));
+    }
+
+    //metodo para ver tarjeta"
+    public void onClickTarjeta(View view){
+        startActivity(new Intent(Menu.this, Tarjeta.class));
     }
 
     //metodo para ver estaciones de recarga"

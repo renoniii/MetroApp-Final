@@ -12,21 +12,18 @@
         android:id="@+id/ImgLogo"
         android:layout_width="253dp"
         android:layout_height="59dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="245dp"
-        android:layout_marginEnd="70dp"
         android:transitionName="logoImageTrans"
-        app:layout_constraintBottom_toTopOf="@+id/InputLoginEmail"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.267"
         app:srcCompat="@drawable/logo" />
 
     <EditText
         android:id="@+id/InputLoginEmail"
         android:layout_width="341dp"
         android:layout_height="60dp"
-        android:layout_marginTop="112dp"
         android:background="@drawable/usuario"
         android:drawableLeft="@drawable/email"
         android:drawablePadding="10dp"
@@ -35,17 +32,45 @@
         android:inputType="textPersonName"
         android:paddingLeft="25dp"
         android:transitionName="inputEmailTrans"
-        app:layout_constraintBottom_toTopOf="@+id/InputLoginPasswd"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.557"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ImgLogo" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.546" />
+
+    <TextView
+        android:id="@+id/TxtToRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿No tienes cuenta? registrate"
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        android:transitionName="textTrans"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.695" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/BtnEntrar"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#4D8110"
+        android:text="@string/BtnEntrar"
+        android:transitionName="btnTrans"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.838" />
 
     <EditText
         android:id="@+id/InputLoginPasswd"
         android:layout_width="341dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="7dp"
         android:background="@drawable/usuario"
         android:drawableLeft="@drawable/security"
         android:drawablePadding="10dp"
@@ -54,40 +79,11 @@
         android:inputType="textPassword"
         android:paddingLeft="25dp"
         android:transitionName="inputPasswdTrans"
-        app:layout_constraintBottom_toTopOf="@+id/TxtToRegister"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.557"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InputLoginEmail"
-        app:passwordToggleEnabled="true" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/BtnEntrar"
-        android:layout_width="260dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="93dp"
-        android:backgroundTint="#4D8110"
-        android:text="@string/BtnEntrar"
-        android:transitionName="btnTrans"
-        app:cornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TxtToRegister" />
-
-    <TextView
-        android:id="@+id/TxtToRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="22dp"
-        android:text="¿No tienes cuenta? registrate"
-        android:textColor="@color/green"
-        android:textStyle="bold"
-        android:transitionName="textTrans"
-        app:layout_constraintBottom_toTopOf="@+id/BtnEntrar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InputLoginPasswd" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.634"
+        app:passwordToggleEnabled="true" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

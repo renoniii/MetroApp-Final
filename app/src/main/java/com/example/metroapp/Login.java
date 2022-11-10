@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ActivityOptions;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -16,10 +17,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Login extends AppCompatActivity {
 
@@ -27,7 +35,9 @@ public class Login extends AppCompatActivity {
     EditText InputLoginEmail, InputLoginPasswd;
     MaterialButton BtnEntrar;
     ImageView ImgLogo;
-    private FirebaseAuth mAuth;
+
+    private FirebaseAuth firebaseAuth;
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +50,9 @@ public class Login extends AppCompatActivity {
         BtnEntrar = findViewById(R.id.BtnEntrar);
         ImgLogo = findViewById(R.id.ImgLogo);
 
-        mAuth = FirebaseAuth.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
 
+        //abrir activity de registro
         ToRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -76,16 +87,12 @@ public class Login extends AppCompatActivity {
 
                 if (email.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                     InputLoginEmail.setError("Correo inválido");
-                    return;
-                } else {
-                    InputLoginEmail.setError(null);
-                }
+                    InputLoginEmail.setFocusable(true);
 
-                if (password.isEmpty() || password.length() < 8) {
-                    InputLoginPasswd.setError("Se necesitan al menos 8 carácteres");
-                    return;
+                }else if (password.isEmpty()) {
+                    InputLoginPasswd.setError("El campo no puede quedar vacío");
+                    InputLoginPasswd.setFocusable(true);
                 } else {
-                    InputLoginPasswd.setError(null);
                     iniciarSesion(email, password);
                 }
             }
@@ -94,19 +101,37 @@ public class Login extends AppCompatActivity {
     }
 
     public void iniciarSesion(String email, String password){
-        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+
+        progressDialog.setCancelable(false);
+        progressDialog.show();
+
+        firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+
+                    progressDialog.dismiss();
+                    FirebaseUser user = firebaseAuth.getCurrentUser();
+
                     Intent intent = new Intent(Login.this, Menu.class);
+                    assert user != null;
+                    Toast.makeText(Login.this, "Bienvenid@" +user.getEmail(), Toast.LENGTH_SHORT).show();
                     startActivity(intent);
                     finish();
                 }
                 else{
+                    progressDialog.dismiss();
                     Toast.makeText(Login.this, "Información incorrecta", Toast.LENGTH_SHORT).show();
                 }
             }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                progressDialog.dismiss();
+                Toast.makeText(Login.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
         });
+
     }
 
 }

@@ -8,6 +8,21 @@
     android:background="@drawable/fondotarjeta">
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBackMenuTarjeta"
+        android:layout_width="70dp"
+        android:layout_height="43dp"
+        android:backgroundTint="@color/green"
+        android:drawableBottom="@drawable/back_arrow"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.893"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnFondos"
         android:layout_width="260dp"
         android:layout_height="50dp"
@@ -19,31 +34,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
-
-    <TextView
-        android:id="@+id/txtSaldo"
-        android:layout_width="345dp"
-        android:layout_height="214dp"
-        android:background="@drawable/tarjeta"
-        android:paddingLeft="25dp"
-        android:paddingTop="100dp"
-        android:text="Saldo: $"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.319" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="120dp"
         android:layout_height="192dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnFondos"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSaldo">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.56">
 
         <CheckBox
             android:id="@+id/rbSaldo1"
@@ -71,14 +73,53 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/txtSaldoint"
+        android:id="@+id/txtNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/nombreUser"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.339"
+        app:layout_constraintHorizontal_bias="0.101"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.24" />
+        app:layout_constraintVertical_bias="0.049" />
+
+    <LinearLayout
+        android:layout_width="332dp"
+        android:layout_height="217dp"
+        android:background="@drawable/tarjeta"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.14">
+
+        <TextView
+            android:id="@+id/txtNroTarjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="220dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/nroTarjeta"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtSaldoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-250dp"
+            android:layout_marginTop="120dp"
+            android:text="@string/saldo" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

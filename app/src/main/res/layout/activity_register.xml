@@ -7,23 +7,61 @@
     tools:context=".Register"
     android:background="@drawable/background">
 
-    <ImageView
-        android:id="@+id/ImgLogoR"
-        android:layout_width="149dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="120dp"
-        android:transitionName="logoImageTrans2"
-        app:layout_constraintBottom_toTopOf="@+id/TxtCrear"
+    <EditText
+        android:id="@+id/InputNombre"
+        android:layout_width="341dp"
+        android:layout_height="60dp"
+        android:background="@drawable/usuario"
+        android:drawableLeft="@drawable/user"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/username"
+        android:inputType="textPersonName"
+        android:paddingLeft="25dp"
+        android:transitionName="inputNameTrans2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:layout_constraintVertical_bias="0.441" />
+
+    <EditText
+        android:id="@+id/InputPasswd"
+        android:layout_width="341dp"
+        android:layout_height="60dp"
+        android:background="@drawable/usuario"
+        android:drawableLeft="@drawable/security"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingLeft="25dp"
+        android:transitionName="inputPasswdTrans2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.709" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/BtnCrear"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#4D8110"
+        android:text="Crear cuenta"
+        android:transitionName="btnTrans2"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.916" />
 
     <EditText
         android:id="@+id/InputPasswdConfirm"
         android:layout_width="341dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="36dp"
         android:background="@drawable/usuario"
         android:drawableLeft="@drawable/security"
         android:drawablePadding="10dp"
@@ -32,10 +70,26 @@
         android:inputType="textPassword"
         android:paddingLeft="25dp"
         android:transitionName="inputPasswdTrans3"
-        app:layout_constraintBottom_toTopOf="@+id/BtnCrear"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InputPasswd" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.798" />
+
+    <TextView
+        android:id="@+id/TxtToLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Ya tienes cuenta?"
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        android:transitionName="textTrans3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.946"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/InputEmail"
@@ -49,101 +103,71 @@
         android:inputType="textEmailAddress"
         android:paddingLeft="25dp"
         android:transitionName="inputEmailTrans2"
-        app:layout_constraintBottom_toTopOf="@+id/InputPasswd"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InputNombre" />
-
-    <TextView
-        android:id="@+id/TxtToLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="135dp"
-        android:layout_marginEnd="139dp"
-        android:layout_marginBottom="150dp"
-        android:text="¿Ya tienes cuenta?"
-        android:textColor="@color/green"
-        android:textStyle="bold"
-        android:transitionName="textTrans3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BtnCrear"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.53" />
 
     <EditText
-        android:id="@+id/InputNombre"
+        android:id="@+id/inputTelefono"
         android:layout_width="341dp"
         android:layout_height="60dp"
-        android:layout_marginTop="16dp"
         android:background="@drawable/usuario"
-        android:drawableLeft="@drawable/user"
+        android:drawableLeft="@drawable/phone"
         android:drawablePadding="10dp"
         android:ems="10"
-        android:hint="@string/username"
-        android:inputType="textPersonName"
+        android:hint="@string/telefono"
+        android:inputType="textEmailAddress"
         android:paddingLeft="25dp"
-        android:transitionName="inputNameTrans2"
-        app:layout_constraintBottom_toTopOf="@+id/InputEmail"
+        android:transitionName="inputEmailTrans2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TxtCrear" />
-
-    <EditText
-        android:id="@+id/InputPasswd"
-        android:layout_width="341dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="1dp"
-        android:background="@drawable/usuario"
-        android:drawableLeft="@drawable/security"
-        android:drawablePadding="10dp"
-        android:ems="10"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:paddingLeft="25dp"
-        android:transitionName="inputPasswdTrans2"
-        app:layout_constraintBottom_toTopOf="@+id/InputPasswdConfirm"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InputEmail" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/BtnCrear"
-        android:layout_width="260dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="66dp"
-        android:layout_marginEnd="67dp"
-        android:backgroundTint="#4D8110"
-        android:text="Crear cuenta"
-        android:transitionName="btnTrans2"
-        app:cornerRadius="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/TxtToLogin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InputPasswdConfirm" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.619" />
 
     <TextView
         android:id="@+id/TxtCrear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="139dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="140dp"
-        android:layout_marginBottom="30dp"
         android:text="CREAR CUENTA"
         android:textColor="@color/green"
         android:textSize="34sp"
         android:textStyle="bold"
         android:transitionName="textTrans2"
-        app:layout_constraintBottom_toTopOf="@+id/InputNombre"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ImgLogoR" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.31" />
+
+    <ImageView
+        android:id="@+id/ImgLogoR"
+        android:layout_width="149dp"
+        android:layout_height="34dp"
+        android:transitionName="logoImageTrans2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.176"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/txtIDTarjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSaldoInicial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
